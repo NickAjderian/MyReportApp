@@ -1,0 +1,33 @@
+<ion-view title="New Report">
+    <ion-content padding="'true'" class="has-header">
+        <a menu-close="" href="#/login" class="button button-stable button-icon  icon-left ion-android-cancel">Cancel</a>
+        <a menu-close="" href="#/checks" class="button button-stable button-icon  icon-right ion-android-arrow-dropright-circle">Next</a>
+        <form class="list">
+            <ion-item class="range range-positive">Current Position
+                <input type="range" value="50" min="0" max="100">
+            </ion-item>
+        </form>
+        <form class="list">
+            <label class="item item-input">
+                <span class="input-label">Report Title</span>
+                <input type="text" placeholder="enter your report title here">
+            </label>
+            <label class="item item-select">
+                <span class="input-label">Staff Name</span>
+                <select></select>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Date Submitted</span>
+                <input type="date" placeholder="">
+            </label>
+            <ion-radio>NDCCG</ion-radio>
+            <ion-radio>DoH</ion-radio>
+            <ion-radio>Monitor</ion-radio>
+            <ion-radio>Board</ion-radio>
+            <label class="item item-input">
+                <span class="input-label">Input</span>
+                <input type="text" placeholder="">
+            </label>
+        </form>
+    </ion-content>
+</ion-view>
