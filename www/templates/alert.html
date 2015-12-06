@@ -1,8 +1,13 @@
 <ion-view title="Alert">
     <ion-content padding="'true'" class="has-header">
-        <div>
-            <p>&lt;i&gt;you have indicated that the report needs to be signed off. Please check that it has been signed off by management/operations as required and then re-submit&lt;/i&gt;</p>
+      <div class="row">
+        <div class="col-25">
+          <img src="img/alert-circle.png">
         </div>
-        <a menu-close="" href="#/home" class="button button-stable button-block ">Close app</a>
+        <div class="col-75 myapp-alert-text myapp-alert-thanks">
+          You have indicated that the report needs to be signed off. Please check that it has been signed off by management/operations as required and then re-submit
+        </div>
+      </div>
+      <a menu-close="" href="#/home" class="button button-stable button-block ">Close app</a>
     </ion-content>
 </ion-view>

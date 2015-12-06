@@ -7,9 +7,12 @@
             <ion-checkbox ng-model="model.newReport.qualityChecksOk">Quality checks?</ion-checkbox>
             <ion-checkbox ng-model="model.newReport.printableOk">Printable (areas)?</ion-checkbox>
             <ion-checkbox ng-model="model.newReport.securityOk">Password?</ion-checkbox>
-            <h3>Sign off needed?</h3>
-            <ion-radio  ng-model="model.newReport.signOffNeeded" ng-value="'yes'">Yes</ion-radio>
-            <ion-radio  ng-model="model.newReport.signOffNeeded" ng-value="'no'">No</ion-radio>
+            <label class="item item-input">
+              <span class="input-label">Sign off needed?</span>
+              <ion-radio  ng-model="model.newReport.signOffNeeded" ng-value="true">Yes</ion-radio>
+              <ion-radio  ng-model="model.newReport.signOffNeeded" ng-value="false">No</ion-radio>
+            </label>
+
             <label class="item item-input">
                 <span class="input-label">Text</span><textarea
               placeholder="enter your comments here"

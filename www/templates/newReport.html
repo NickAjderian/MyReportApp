@@ -6,11 +6,6 @@
            ng-click="onNext()"
         >Next</a>
         <form class="list">
-            <ion-item class="range range-positive">Current Position
-                <input type="range" value="50" min="0" max="100">
-            </ion-item>
-        </form>
-        <form class="list">
             <label class="item item-input">
                 <span class="input-label">Report Title</span>
                 <input type="text" placeholder="enter your report title here"
@@ -32,15 +27,17 @@
                 <span class="input-label">Date Submitted</span>
                 <input type="date" placeholder="" ng-model="model.newReport.dateSubmitted">
             </label>
-
+          <label class="item item-input">
+            <span class="input-label">Report Type</span>
             <ion-radio ng-model="model.newReport.reportType" ng-value="'NDCCCG'">NDCCG</ion-radio>
             <ion-radio ng-model="model.newReport.reportType" ng-value="'DoH'">DoH</ion-radio>
             <ion-radio ng-model="model.newReport.reportType" ng-value="'Monitor'">Monitor</ion-radio>
             <ion-radio ng-model="model.newReport.reportType" ng-value="'Board'">Board</ion-radio>
-            <label class="item item-input">
-                <span class="input-label">Input</span>
-                <input type="text" placeholder=""  ng-model="model.newReport.comments">
-            </label>
+          </label>
+          <ion-item class="range range-positive">Current Position
+            <input type="range" value="50" min="0" max="100" ng-model="model.newReport.currentPosition">
+          </ion-item>
+
         </form>
     </ion-content>
 </ion-view>

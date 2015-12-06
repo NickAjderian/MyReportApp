@@ -11,3 +11,15 @@ body{
 .staff-placeholder{
   color:darkgrey;
 }
+.myapp-alert-text{
+  color:red;
+  font-size:30px;
+  border:20px;
+  text-align:center;
+  vertical-align: middle;
+  line-height:130%;
+}
+.myapp-alert-thanks{
+  color:green;
+}
+
