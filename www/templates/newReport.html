@@ -1,7 +1,10 @@
 <ion-view title="New Report">
     <ion-content padding="'true'" class="has-header">
         <a menu-close="" href="#/login" class="button button-stable button-icon  icon-left ion-android-cancel">Cancel</a>
-        <a menu-close="" href="#/checks" class="button button-stable button-icon  icon-right ion-android-arrow-dropright-circle">Next</a>
+        <a menu-close=""
+           class="button button-stable button-icon  icon-right ion-android-arrow-dropright-circle"
+           ng-click="onNext()"
+        >Next</a>
         <form class="list">
             <ion-item class="range range-positive">Current Position
                 <input type="range" value="50" min="0" max="100">
@@ -10,23 +13,30 @@
         <form class="list">
             <label class="item item-input">
                 <span class="input-label">Report Title</span>
-                <input type="text" placeholder="enter your report title here">
+                <input type="text" placeholder="enter your report title here"
+                  ng-model="model.newReport.reportName">
             </label>
             <label class="item item-select">
                 <span class="input-label">Staff Name</span>
-                <select></select>
+                <select ng-model="model.newReport.staffName">
+                  <option value="fred">Fred</option>
+                  <option value="barney">Barney</option>
+                  <option value="betty">Betty</option>
+                  <option value="wilma">Wilma</option>
+                </select>
             </label>
             <label class="item item-input">
                 <span class="input-label">Date Submitted</span>
-                <input type="date" placeholder="">
+                <input type="date" placeholder="" ng-model="model.newReport.dateSubmitted">
             </label>
-            <ion-radio>NDCCG</ion-radio>
-            <ion-radio>DoH</ion-radio>
-            <ion-radio>Monitor</ion-radio>
-            <ion-radio>Board</ion-radio>
+
+            <ion-radio ng-model="model.newReport.reportType" ng-value="'NDCCCG'">NDCCG</ion-radio>
+            <ion-radio ng-model="model.newReport.reportType" ng-value="'DoH'">DoH</ion-radio>
+            <ion-radio ng-model="model.newReport.reportType" ng-value="'Monitor'">Monitor</ion-radio>
+            <ion-radio ng-model="model.newReport.reportType" ng-value="'Board'">Board</ion-radio>
             <label class="item item-input">
                 <span class="input-label">Input</span>
-                <input type="text" placeholder="">
+                <input type="text" placeholder=""  ng-model="model.newReport.comments">
             </label>
         </form>
     </ion-content>
