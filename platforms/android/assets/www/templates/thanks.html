@@ -1,7 +1,15 @@
 <ion-view title="Thanks">
     <ion-content padding="'true'" class="has-header">
-        <h2>Thank you for the report submission.</h2>
-        <a menu-close="" href="#/new" class="button button-stable button-block ">Submit Another</a>
+      <div class="row">
+        <div class="col-25">
+          <img src="img/thanks-circle.png">
+        </div>
+        <div class="col-75 myapp-alert-text myapp-alert-thanks">
+          Thank you for the report submission
+        </div>
+      </div>
+
+        <a menu-close="" ng-click="onNew()" class="button button-stable button-block ">Submit Another</a>
         <a menu-close="" href="#/home" class="button button-stable button-block ">Log Out</a>
     </ion-content>
 </ion-view>

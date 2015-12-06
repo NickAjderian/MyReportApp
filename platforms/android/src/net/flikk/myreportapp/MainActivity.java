@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.ionicframework.myreportapp230137;
+package net.flikk.myreportapp;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

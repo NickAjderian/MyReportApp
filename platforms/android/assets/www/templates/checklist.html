@@ -2,16 +2,21 @@
     <ion-content padding="'true'" class="has-header">
         <form class="list">
             <a menu-close="" href="#/new" class="button button-stable button-icon  icon-left ion-android-cancel">Cancel</a>
-            <a menu-close="" href="#/summary" class="button button-stable button-icon  icon-right ion-android-arrow-dropright-circle">Next</a>
+            <a menu-close="" ng-click="onNext()"  class="button button-stable button-icon  icon-right ion-android-arrow-dropright-circle">Next</a>
             <h3>Checklist</h3>
-            <ion-checkbox>Quality checks?</ion-checkbox>
-            <ion-checkbox>Printable (areas)?</ion-checkbox>
-            <ion-checkbox>Password?</ion-checkbox>
-            <h3>Sign off needed?</h3>
-            <ion-radio>Yes</ion-radio>
-            <ion-radio>No</ion-radio>
+            <ion-checkbox ng-model="model.newReport.qualityChecksOk">Quality checks?</ion-checkbox>
+            <ion-checkbox ng-model="model.newReport.printableOk">Printable (areas)?</ion-checkbox>
+            <ion-checkbox ng-model="model.newReport.securityOk">Password?</ion-checkbox>
             <label class="item item-input">
-                <span class="input-label">Text</span><textarea placeholder="enter your comments here"> </textarea>
+              <span class="input-label">Sign off needed?</span>
+              <ion-radio  ng-model="model.newReport.signOffNeeded" ng-value="true">Yes</ion-radio>
+              <ion-radio  ng-model="model.newReport.signOffNeeded" ng-value="false">No</ion-radio>
+            </label>
+
+            <label class="item item-input">
+                <span class="input-label">Text</span><textarea
+              placeholder="enter your comments here"
+              ng-model="model.newReport.comments"> </textarea>
             </label>
         </form>
     </ion-content>

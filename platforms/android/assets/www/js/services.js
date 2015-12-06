@@ -6,5 +6,10 @@ angular.module('app.services', [])
 
 .service('BlankService', [function(){
 
-}]);
-
+}])
+.service('ModelSvc',[function(){
+  return {
+    username:'username'
+  };
+}])
+;
