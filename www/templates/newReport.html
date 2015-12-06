@@ -16,9 +16,12 @@
                 <input type="text" placeholder="enter your report title here"
                   ng-model="model.newReport.reportName">
             </label>
-            <label class="item item-select">
+            <label class="item item-input item-select">
                 <span class="input-label">Staff Name</span>
-                <select ng-model="model.newReport.staffName">
+                <select
+                        ng-class="model.newReport.staffName ? '': 'staff-placeholder'"
+                        ng-model="model.newReport.staffName">
+                  <option value="" class="staff-placeholder" selected="selected">choose staff x</option>
                   <option value="fred">Fred</option>
                   <option value="barney">Barney</option>
                   <option value="betty">Betty</option>

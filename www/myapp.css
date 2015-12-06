@@ -1,0 +1,13 @@
+body{
+ color: blue;
+}
+.item-select select{
+  font-size:20px;
+  left:200px;
+}
+.item-select .staff-placeholder{
+  color:darkgrey;
+}
+.staff-placeholder{
+  color:darkgrey;
+}
